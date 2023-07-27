@@ -14,7 +14,7 @@ struct SimulatorArguments
     /// @brief Simulation duration [s]
     double simulation_duration = 10;
     /// @brief Simulation step [s]
-    double simulation_step = 0.1;
+    double simulation_step = 0.001;
 
     /// @brief Model selection
     SimulatorModel model = SimulatorModel::Newtonian;
