@@ -1,4 +1,3 @@
-#include <format>
 #include <iostream>
 
 #include "../../lib/signalsmith_plot.h"
@@ -27,14 +26,14 @@ const void visualize_entity_trajectory(Simulator::Objects::SimulatorEntity *enti
     auto &acc_line = a_plot.line();
     for (auto &state : entity->entity_trajectory)
     {
-        vel_line.add(state.time, abs(state.velocity));
-        pos_line.add(state.time, abs(state.position));
-        acc_line.add(state.time, abs(state.acceleration));
+        vel_line.add(state.time, std::fabs(state.velocity));
+        pos_line.add(state.time, std::fabs(state.position));
+        acc_line.add(state.time, std::fabs(state.acceleration));
     }
 
-    v_plot.write(std::format("../output/velocity_{0}.svg", file_suffix));
-    p_plot.write(std::format("../output/position_{0}.svg", file_suffix));
-    a_plot.write(std::format("../output/acceleration_{0}.svg", file_suffix));
+    v_plot.write("../output/velocity_" + file_suffix + ".svg");
+    p_plot.write("../output/position_" + file_suffix + ".svg");
+    a_plot.write("../output/acceleration_" + file_suffix + ".svg");
 }
 
 } // namespace Simulator::Visualize

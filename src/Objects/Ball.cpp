@@ -59,7 +59,7 @@ std::optional<double> Ball::get_force_sum(double velocity, double position) cons
     if (model == SimulatorModel::Newtonian)
     {
         // Check for (R+x)=0 edge case end condition.
-        if (abs(position) >= planet_radius)
+        if (std::fabs(position) >= planet_radius)
         {
             // return nullopt
             return {};

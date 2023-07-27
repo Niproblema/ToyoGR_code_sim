@@ -2,6 +2,7 @@
 
 #include <optional>
 #include <numbers>
+#include <cmath>
 
 #include "../Arguments/SimulationArguments.hpp"
 #include "EntityState.hpp"
