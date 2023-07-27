@@ -7,7 +7,7 @@ g++ 12.2.0
 Find [src/Arguments/SimulationArguments.hpp](src/Arguments/SimulationArguments.hpp) and adjust parameters.
 
 ## Running
-
+Windows cmd example
 ```
 cd src
 mkdir build\Debug
